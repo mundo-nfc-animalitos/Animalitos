@@ -3,57 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TOTO - Perfil NFC</title>
+<title>VIP - Perfil NFC</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:system-ui;background:#f2f2f2}
-.phone{max-width:430px;margin:0 auto;background:white;min-height:100vh}
-.header{background:#E53935;color:white;text-align:center;padding:12px 0;font-size:24px;font-weight:900}
-.header span{border:2px solid white;border-radius:10px;padding:4px 12px}
-.dog{width:160px;height:160px;border-radius:50%;object-fit:cover;display:block;margin:-10px auto 10px;border:5px solid white;box-shadow:0 4px 15px rgba(0,0,0,.2)}
-h1{text-align:center;margin:10px 0 2px;font-size:32px}
-.sub{text-align:center;color:#666;font-size:14px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:15px}
-.box{background:#F5F5F5;border-radius:12px;padding:12px;display:flex;align-items:center;gap:10px;font-size:14px}
-.map-wrap{margin:10px 15px;border-radius:14px;overflow:hidden;border:1px solid #ddd}
-iframe{width:100%;height:180px;border:0}
-.data{padding:0 15px;font-size:13px;color:#555}
-.reward{background:#FFF0B3;margin:15px;border-radius:12px;padding:12px;text-align:center}
-.btns{display:flex;gap:10px;padding:0 15px 15px}
-.btn{flex:1;padding:15px;border-radius:12px;text-align:center;color:white;text-decoration:none;font-weight:800;font-size:17px}
-.wa{background:#25D366}.call{background:#1976D2}
+body{font-family:'Nunito',sans-serif;background:#f0f2f5;margin:0;padding:10px}
+.card{max-width:430px;margin:0 auto;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.15)}
+.top-bar{padding:12px;text-align:center;font-weight:900;color:#fff;font-size:14px;letter-spacing:1px}
+.perdido{background:#ff3b30} .encasa{background:#34c759}
+.img-box{position:relative} .img-box img{width:100%;height:380px;object-fit:cover}
+.badge{position:absolute;bottom:16px;left:16px;padding:8px 16px;border-radius:50px;font-weight:900;color:#fff}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.info-item{background:#f8f9fa;padding:12px;border-radius:12px;text-align:left;font-size:13px}
+.info-item b{display:block;color:#111;font-size:14px}
+.content{padding:20px;text-align:center}
+.reward{padding:16px;border-radius:14px;font-weight:900;font-size:18px;margin:14px 0}
+.si{background:#fff8db;color:#7a5a00;border:2px dashed #ffcc00} .no{background:#e8f5e9;color:#2e7d32}
+.btn{display:block;padding:16px;border-radius:50px;text-decoration:none;font-weight:800;margin:9px 0}
+.wsp{background:#25D366;color:#fff} .call{background:#111;color:#fff} .loc{background:#007aff;color:#fff}
+.gallery{display:flex;gap:8px;margin:12px 0} .gallery img{width:33%;height:90px;object-fit:cover;border-radius:10px}
+.alert-box{background:#fff3f3;border:1px solid #ffcccb;padding:12px;border-radius:12px;font-size:13px;text-align:left;margin:10px 0}
 </style>
 </head>
 <body>
-<div class="phone">
-<div class="header"><span>⚠️ ME PERDÍ</span></div>
-<img class="dog" src="toto.jpeg">
-<h1>TOTO</h1>
-<div class="sub">Perfil NFC • ID: #TOTO-8421</div>
 
-<div class="grid">
-<div class="box">🐾<div><b>Raza:</b><br>Caniche Toy</div></div>
-<div class="box">🎂<div><b>Edad:</b><br>3 años</div></div>
-<div class="box">⚖️<div><b>Peso:</b><br>4 kg</div></div>
-<div class="box">♂️<div><b>Sexo:</b><br>Macho</div></div>
+<script>
+// ★★★★★ SOLO EDITAS ESTO - VERSION VIP ★★★★★
+const CONFIG = {
+  nombre: "TOTO",
+  raza: "Caniche - 3 años - Macho",
+  foto_principal: "toto.jpeg",
+  fotos_extra: ["toto.jpeg", "toto.jpeg", "toto.jpeg"], // pone 3 fotos diferentes si tenes
+
+  modo_perdido: true, // true = "¡ME PERDÍ!" en rojo / false = "Estoy en casa" en verde
+  
+  recompensa_activa: true,
+  monto: "$15.000",
+
+  zona: "Rafael Calzada - Almirante Brown",
+  dueno: "Familia Garcia",
+  tel1: "5491123456789", // Contacto 1
+  tel2: "5491133344444", // Contacto 2 (opcional, deja vacio si no hay)
+
+  // INFO MEDICA VIP
+  alergias: "Alérgico al pollo y a las abejas",
+  medicacion: "Toma gotas para la ansiedad",
+  comportamiento: "Es miedoso, no lo corras. Agachate y llamalo suave. Le gustan las galletitas.",
+
+  vete_nombre: "Vete Calzada",
+  vete_tel: "5491122223333",
+
+  maps_link: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1639!2d-58.33!3d-34.78!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1"
+};
+</script>
+
+<div class="card">
+  <div id="topBar" class="top-bar"></div>
+  <div class="img-box">
+    <img id="fMain" src="">
+    <div id="bState" class="badge"></div>
+  </div>
+  <div class="content">
+    <h1 id="nNombre" style="margin:5px 0 0 0;font-size:28px"></h1>
+    <p id="nRaza" style="color:#777;margin:0 0 10px 0"></p>
+
+    <div class="gallery">
+      <img id="g1"><img id="g2"><img id="g3">
+    </div>
+
+    <div id="cReward" class="reward"></div>
+
+    <div class="info-grid">
+      <div class="info-item">💊 Alergias<b id="tAlergia"></b></div>
+      <div class="info-item">🧠 Comportamiento<b id="tComp" style="font-weight:600"></b></div>
+    </div>
+    <div class="alert-box">💉 <b>Medicación:</b> <span id="tMed"></span></div>
+
+    <a id="bWsp1" class="btn wsp" href="#">📲 WhatsApp Dueño 1</a>
+    <a id="bWsp2" class="btn wsp" href="#" style="display:none">📲 WhatsApp Dueño 2</a>
+    <a id="bCall" class="btn call" href="#">📞 Llamar</a>
+    <a class="btn loc" href="#" onclick="compartirUbicacion()">📍 Compartir mi ubicación exacta</a>
+    <a id="bVete" class="btn" style="background:#f0f0f0;color:#333" href="#">🏥 Mi Veterinaria</a>
+
+    <p style="font-size:13px;color:#888;margin-top:14px">Visto en: <b id="zZona"></b></p>
+    <iframe id="fMap" style="width:100%;height:190px;border:0;border-radius:14px"></iframe>
+    <p style="font-size:11px;color:#bbb;margin-top:15px">ID VIP: <span id="idFinal"></span> | <span id="dFinal"></span></p>
+  </div>
 </div>
 
-<h3 style="text-align:center;margin:10px 0">Último lugar visto</h3>
-<div class="map-wrap">
-<iframe src="https://www.google.com/maps?q=-34.7826,-58.3331&z=15&output=embed"></iframe>
-</div>
-<div class="data">📍 Rafael Calzada, Buenos Aires • Visto: Hoy 10:30 hs<br>💉 Vacunas al día • 😊 Manso, no muerde</div>
+<script>
+document.getElementById('fMain').src=CONFIG.foto_principal;
+document.getElementById('g1').src=CONFIG.fotos_extra[0];document.getElementById('g2').src=CONFIG.fotos_extra[1];document.getElementById('g3').src=CONFIG.fotos_extra[2];
+document.getElementById('nNombre').innerText=CONFIG.nombre;document.getElementById('nRaza').innerText=CONFIG.raza;
+document.getElementById('zZona').innerText=CONFIG.zona;document.getElementById('dFinal').innerText=CONFIG.dueno;
+document.getElementById('tAlergia').innerText=CONFIG.alergias;document.getElementById('tMed').innerText=CONFIG.medicacion;document.getElementById('tComp').innerText=CONFIG.comportamiento;
+document.getElementById('idFinal').innerText=CONFIG.nombre+"-VIP-"+CONFIG.tel1.slice(-4);
+document.getElementById('fMap').src=CONFIG.maps_link;
 
-<div class="reward">
-🎁 <b>RECOMPENSA $50.000</b><br>
-<span style="font-size:13px">¡Gracias por ayudar! Total confidencialidad.</span>
-</div>
+const topBar=document.getElementById('topBar');const bState=document.getElementById('bState');
+if(CONFIG.modo_perdido){topBar.className="top-bar perdido";topBar.innerText="🚨 MODO PERDIDO ACTIVO - ¡AYUDAME A VOLVER!";bState.style.background="#ff3b30";bState.innerText="¡ME PERDÍ!";}
+else{topBar.className="top-bar encasa";topBar.innerText="✅ ESTOY EN CASA - TODO BIEN";bState.style.background="#34c759";bState.innerText="En Casa";}
 
-<div class="btns">
-<a class="btn wa" href="https://wa.me/5491128314941?text=Hola!%20Encontre%20a%20TOTO%20en%20https://mundo-nfc-animalitos.github.io/Animalitos/toto/">WhatsApp</a>
-<a class="btn call" href="tel:+5491128314941">Llamar</a>
-</div>
+const cR=document.getElementById('cReward');
+if(CONFIG.recompensa_activa){cR.className="reward si";cR.innerText=`¡RECOMPENSA ${CONFIG.monto}!`;}else{cR.className="reward no";cR.innerText="¡Gracias por ayudarme a volver! ❤️";}
 
-<p style="text-align:center;font-size:11px;color:#999;padding-bottom:20px">Toca el NFC del collar para compartir este perfil<br>Mundo NFC Animalitos - Rafael Calzada</p>
-</div>
+document.getElementById('bWsp1').href=`https://wa.me/${CONFIG.tel1}?text=Hola! Encontre a ${CONFIG.nombre} - https://mundo-nfc-animalitos.github.io/Animalitos/${CONFIG.nombre.toLowerCase()}/`;
+document.getElementById('bCall').href=`tel:+${CONFIG.tel1}`;
+document.getElementById('bVete').href=`https://wa.me/${CONFIG.vete_tel}?text=Hola vete, soy dueño de ${CONFIG.nombre}`;
+
+if(CONFIG.tel2){const b2=document.getElementById('bWsp2');b2.style.display='block';b2.href=`https://wa.me/${CONFIG.tel2}?text=Hola! Encontre a ${CONFIG.nombre}`;}
+
+function compartirUbicacion(){
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(pos=>{
+      const lat=pos.coords.latitude;const lon=pos.coords.longitude;
+      const url=`https://www.google.com/maps?q=${lat},${lon}`;
+      const msg=`¡Encontre a ${CONFIG.nombre}! Estoy aqui: ${url}`;
+      window.open(`https://wa.me/${CONFIG.tel1}?text=${encodeURIComponent(msg)}`,'_blank');
+    });
+  } else { alert("Activa el GPS"); }
+}
+</script>
 </body>
 </html>

@@ -37,12 +37,12 @@ const CONFIG = {
   modo_perdido: true, // true = "¡ME PERDÍ!" en rojo / false = "Estoy en casa" en verde
   
   recompensa_activa: true,
-  monto: "$15.000",
+  monto: "$100.000",
 
   zona: "Rafael Calzada - Almirante Brown",
-  dueno: "Familia Garcia",
-  tel1: "5491123456789", // Contacto 1
-  tel2: "5491133344444", // Contacto 2 (opcional, deja vacio si no hay)
+  dueno: "Familia Gomez",
+  tel1: "5491128314941", // Contacto 1
+  tel2: "5491128314941", // Contacto 2 (opcional, deja vacio si no hay)
 
   // INFO MEDICA VIP
   alergias: "Alérgico al pollo y a las abejas",
@@ -106,11 +106,11 @@ else{topBar.className="top-bar encasa";topBar.innerText="✅ ESTOY EN CASA - TOD
 const cR=document.getElementById('cReward');
 if(CONFIG.recompensa_activa){cR.className="reward si";cR.innerText=`¡RECOMPENSA ${CONFIG.monto}!`;}else{cR.className="reward no";cR.innerText="¡Gracias por ayudarme a volver! ❤️";}
 
-document.getElementById('bWsp1').href=`https://wa.me/${CONFIG.tel1}?text=Hola! Encontre a ${CONFIG.nombre} - https://mundo-nfc-animalitos.github.io/Animalitos/${CONFIG.nombre.toLowerCase()}/`;
+document.getElementById('bWsp1').href=`https://wa.me/${CONFIG.tel1}?text=Hola! Encontre a ${CONFIG.nombre} Esta Bien, Contactate Conmigo URGENTE!`;}
 document.getElementById('bCall').href=`tel:+${CONFIG.tel1}`;
 document.getElementById('bVete').href=`https://wa.me/${CONFIG.vete_tel}?text=Hola vete, soy dueño de ${CONFIG.nombre}`;
 
-if(CONFIG.tel2){const b2=document.getElementById('bWsp2');b2.style.display='block';b2.href=`https://wa.me/${CONFIG.tel2}?text=Hola! Encontre a ${CONFIG.nombre}`;}
+if(CONFIG.tel2){const b2=document.getElementById('bWsp2');b2.style.display='block';b2.href=`https://wa.me/${CONFIG.tel2}?text=Hola! Encontre a ${CONFIG.nombre} Esta Bien, Contactate Conmigo URGENTE!`;}
 
 function compartirUbicacion(){
   if(navigator.geolocation){

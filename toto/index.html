@@ -1,9 +1,59 @@
 <!DOCTYPE html>
-<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>TOTO</title></head>
-<body style="font-family:sans-serif; text-align:center; background:#fff8e1; padding:15px;">
-<h1 style="color:red;">¡ME PERDI! SOY TOTO</h1>
-<img src="toto.jpeg" style="width:100%; max-width:380px; border-radius:20px;">
-<h2>¿Me ayudas a volver?</h2>
-<a href="https://wa.me/5491128314941" style="display:block; background:#25D366; color:white; padding:18px; border-radius:12px; text-decoration:none; font-size:22px; margin:10px;">WHATSAPP AL DUEÑO</a>
-<p><b>Vivo en:</b> Rafael Calzada<br><b>Soy:</b> Manso y vacunado</p>
-</body></html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOTO - Perfil NFC</title>
+<style>
+body{margin:0;font-family:system-ui;background:#f2f2f2}
+.phone{max-width:430px;margin:0 auto;background:white;min-height:100vh}
+.header{background:#E53935;color:white;text-align:center;padding:12px 0;font-size:24px;font-weight:900}
+.header span{border:2px solid white;border-radius:10px;padding:4px 12px}
+.dog{width:160px;height:160px;border-radius:50%;object-fit:cover;display:block;margin:-10px auto 10px;border:5px solid white;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+h1{text-align:center;margin:10px 0 2px;font-size:32px}
+.sub{text-align:center;color:#666;font-size:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:15px}
+.box{background:#F5F5F5;border-radius:12px;padding:12px;display:flex;align-items:center;gap:10px;font-size:14px}
+.map-wrap{margin:10px 15px;border-radius:14px;overflow:hidden;border:1px solid #ddd}
+iframe{width:100%;height:180px;border:0}
+.data{padding:0 15px;font-size:13px;color:#555}
+.reward{background:#FFF0B3;margin:15px;border-radius:12px;padding:12px;text-align:center}
+.btns{display:flex;gap:10px;padding:0 15px 15px}
+.btn{flex:1;padding:15px;border-radius:12px;text-align:center;color:white;text-decoration:none;font-weight:800;font-size:17px}
+.wa{background:#25D366}.call{background:#1976D2}
+</style>
+</head>
+<body>
+<div class="phone">
+<div class="header"><span>⚠️ ME PERDÍ</span></div>
+<img class="dog" src="toto.jpeg">
+<h1>TOTO</h1>
+<div class="sub">Perfil NFC • ID: #TOTO-8421</div>
+
+<div class="grid">
+<div class="box">🐾<div><b>Raza:</b><br>Caniche Toy</div></div>
+<div class="box">🎂<div><b>Edad:</b><br>3 años</div></div>
+<div class="box">⚖️<div><b>Peso:</b><br>4 kg</div></div>
+<div class="box">♂️<div><b>Sexo:</b><br>Macho</div></div>
+</div>
+
+<h3 style="text-align:center;margin:10px 0">Último lugar visto</h3>
+<div class="map-wrap">
+<iframe src="https://www.google.com/maps?q=-34.7826,-58.3331&z=15&output=embed"></iframe>
+</div>
+<div class="data">📍 Rafael Calzada, Buenos Aires • Visto: Hoy 10:30 hs<br>💉 Vacunas al día • 😊 Manso, no muerde</div>
+
+<div class="reward">
+🎁 <b>RECOMPENSA $50.000</b><br>
+<span style="font-size:13px">¡Gracias por ayudar! Total confidencialidad.</span>
+</div>
+
+<div class="btns">
+<a class="btn wa" href="https://wa.me/5491128314941?text=Hola!%20Encontre%20a%20TOTO%20en%20https://mundo-nfc-animalitos.github.io/Animalitos/toto/">WhatsApp</a>
+<a class="btn call" href="tel:+5491128314941">Llamar</a>
+</div>
+
+<p style="text-align:center;font-size:11px;color:#999;padding-bottom:20px">Toca el NFC del collar para compartir este perfil<br>Mundo NFC Animalitos - Rafael Calzada</p>
+</div>
+</body>
+</html>

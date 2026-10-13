@@ -37,10 +37,10 @@ const CONFIG = {
   modo_perdido: true, // true = "¡ME PERDÍ!" en rojo / false = "Estoy en casa" en verde
   
   recompensa_activa: true,
-  monto: "$100.000",
+  monto: "$15.000",
 
   zona: "Rafael Calzada - Almirante Brown",
-  dueno: "Familia Gomez",
+  dueno: "Familia Garcia",
   tel1: "5491128314941", // Contacto 1
   tel2: "5491128314941", // Contacto 2 (opcional, deja vacio si no hay)
 
@@ -110,7 +110,7 @@ document.getElementById('bWsp1').href=`https://wa.me/${CONFIG.tel1}?text=Hola! E
 document.getElementById('bCall').href=`tel:+${CONFIG.tel1}`;
 document.getElementById('bVete').href=`https://wa.me/${CONFIG.vete_tel}?text=Hola vete, soy dueño de ${CONFIG.nombre}`;
 
-if(CONFIG.tel2){const b2=document.getElementById('bWsp2');b2.style.display='block';b2.href=`https://wa.me/${CONFIG.tel2}?text=Hola! Encontre a ${CONFIG.nombre} Esta Bien, Contactate Conmigo URGENTE!`;}
+if(CONFIG.tel2){const b2=document.getElementById('bWsp2');b2.style.display='block';b2.href=`https://wa.me/${CONFIG.tel2}?text=Hola! Encontre a ${CONFIG.nombre}`;}
 
 function compartirUbicacion(){
   if(navigator.geolocation){

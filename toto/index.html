@@ -106,11 +106,11 @@ else{topBar.className="top-bar encasa";topBar.innerText="✅ ESTOY EN CASA - TOD
 const cR=document.getElementById('cReward');
 if(CONFIG.recompensa_activa){cR.className="reward si";cR.innerText=`¡RECOMPENSA ${CONFIG.monto}!`;}else{cR.className="reward no";cR.innerText="¡Gracias por ayudarme a volver! ❤️";}
 
-document.getElementById('bWsp1').href=`https://wa.me/${CONFIG.tel1}?text=Hola! Encontre a ${CONFIG.nombre}! Esta Bien! Contactate conmigo URGENTE!`;}
+document.getElementById('bWsp1').href=`https://wa.me/${CONFIG.tel1}?text=Hola! Encontre a ${CONFIG.nombre} - https://mundo-nfc-animalitos.github.io/Animalitos/${CONFIG.nombre.toLowerCase()}/`;
 document.getElementById('bCall').href=`tel:+${CONFIG.tel1}`;
-document.getElementById('bVete').href=`https://wa.me/${CONFIG.vete_tel}?text=Hola veterinaria, soy dueño de ${CONFIG.nombre}`;
+document.getElementById('bVete').href=`https://wa.me/${CONFIG.vete_tel}?text=Hola vete, soy dueño de ${CONFIG.nombre}`;
 
-if(CONFIG.tel2){const b2=document.getElementById('bWsp2');b2.style.display='block';b2.href=`https://wa.me/${CONFIG.tel2}?text=Hola! Encontre a ${CONFIG.nombre}! Esta Bien! Contactate conmigo URGENTE!`;}
+if(CONFIG.tel2){const b2=document.getElementById('bWsp2');b2.style.display='block';b2.href=`https://wa.me/${CONFIG.tel2}?text=Hola! Encontre a ${CONFIG.nombre}`;}
 
 function compartirUbicacion(){
   if(navigator.geolocation){
